@@ -103,7 +103,7 @@ Explanation: The optimal solution is to remove the last two elements to reduce x
 
 // You may assume the array is the output of JSON.parse.
 
- 
+
 
 // Example 1:
 
@@ -117,23 +117,23 @@ Explanation: The optimal solution is to remove the last two elements to reduce x
  * @return {null|boolean|number|string|Array|Object}
  */
 // Array.prototype.last = function() {
-    //     return this.length===0?-1:this.pop()
-    // };
-    
-    /**
-     * const arr = [1, 2, 3];
- * arr.last(); // 3
-    */
-   
-   
-   
-   
-   // *************Problem 4*******************
+//     return this.length===0?-1:this.pop()
+// };
+
+/**
+ * const arr = [1, 2, 3];
+* arr.last(); // 3
+*/
+
+
+
+
+// *************Problem 4*******************
 
 /**
  * 
- * 
- * Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
+* 
+* Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
 
  
 
@@ -147,8 +147,8 @@ Explanation:
 counter() = 10 // The first time counter() is called, it returns n.
 counter() = 11 // Returns 1 more than the previous time.
 counter() = 12 // Returns 1 more than the previous time.
- * 
- */
+* 
+*/
 
 //solution
 
@@ -157,7 +157,7 @@ counter() = 12 // Returns 1 more than the previous time.
 //  * @return {Function} counter
 //  */
 // var createCounter = function(n) {
-    
+
 //     return function() {
 //         return n++
 //     };
@@ -169,3 +169,76 @@ counter() = 12 // Returns 1 more than the previous time.
  * counter() // 11
  * counter() // 12
  */
+
+
+// *************Problem 5*******************
+
+//    Given a positive integer millis, write an asynchronous function that sleeps for millis milliseconds. It can resolve any value.
+
+
+
+// Example 1:
+
+// Input: millis = 100
+// Output: 100
+// Explanation: It should return a promise that resolves after 100ms.
+// let t = Date.now();
+// sleep(100).then(() => {
+//   console.log(Date.now() - t); // 100
+// });
+const myPromise = new Promise((resolve, reject) => {
+    // This is the executor function.
+    // It takes two arguments: resolve and reject.
+
+    // Perform some asynchronous operation here.
+    // If successful, call resolve with the result.
+    // If there's an error, call reject with an error message.
+
+    // Example:
+    setTimeout(() => {
+        const randomNumber = Math.random();
+        if (randomNumber > 0.5) {
+            resolve(randomNumber); // Resolve with a value
+        } else {
+            reject("Random number is too small."); // Reject with an error message
+        }
+    }, 1000);
+});
+
+// Using the promise:
+myPromise.then(result => {
+    console.log("Resolved:", result);
+}).catch(error => {
+    console.error("Rejected:", error);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+const newPromise = new Promise((res, re) => {
+    setTimeout(() => {
+        const random = Math.random() * 2
+        if (random > 1) {
+            res(random)
+        }
+        else {
+            rej("this is not ok F")
+        }
+    }, 5000);
+})
+newPromise.then(result => {
+    console.log("resul", result);
+}).catch(error => {
+    console.log("error", error);
+})
+
+
+
