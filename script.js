@@ -269,8 +269,6 @@ counter() = 12 // Returns 1 more than the previous time.
 // (3) + nums[2] = 6
 // (6) + nums[3] = 10
 // The final answer is 10.
-
-
 /**
  * @param {number[]} nums
  * @param {Function} fn
@@ -287,3 +285,4 @@ counter() = 12 // Returns 1 more than the previous time.
 //     }
 //     return val
 // }
+
