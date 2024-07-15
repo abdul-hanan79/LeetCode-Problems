@@ -152,3 +152,28 @@ class Node {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let prev = null;
+// let cur = head; // 1
+
+// while (cur !== null) {
+//     let tempNext = cur.next; // store the next node // 2,3,4,5,
+//     cur.next = prev;         // reverse the current node's pointer //null,1,2,3
+//     prev = cur;              // move prev to the current node //1,2,3,4
+//     cur = tempNext;          // move cur to the next node // 2,3,4,5
+// }
+
+// return prev; // prev will be the new head of the reversed list
+
