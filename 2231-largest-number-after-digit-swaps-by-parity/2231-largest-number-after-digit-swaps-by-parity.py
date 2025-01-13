@@ -18,17 +18,11 @@ class Solution:
                     firstElementParity = "odd"
                 heapq.heappush(oddHeap, -x)
         res = []
-        while oddHeap or evenHeap:
-            if firstElementParity == "even":
-                if evenHeap:
-                    res.append(-heapq.heappop(evenHeap))
-
-                if oddHeap:
-                    res.append(-heapq.heappop(oddHeap))
+        for x in str(num):
+            x=int(x)
+            if x%2==0:
+                res.append(-heapq.heappop(evenHeap))
             else:
-                if oddHeap:
-                    res.append(-heapq.heappop(oddHeap))
-                if evenHeap:
-                    res.append(-heapq.heappop(evenHeap))
-        
+                res.append(-heapq.heappop(oddHeap))
+              
         return int("".join(map(str, res)))
