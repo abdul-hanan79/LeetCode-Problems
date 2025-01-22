@@ -15,6 +15,6 @@ var getLucky = function (s, k) {
         number = String(result)
         k--
     }
-    return result
+    return Number(result)
 
 };
