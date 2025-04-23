@@ -4,10 +4,15 @@
  * @return {boolean}
  */
 var isPrefixString = function (s, words) {
-    let wordsString = words.join("")
-    if (s == wordsString.slice(0, s.length)) {
-        return true
-    } else {
-        return false
+    let string = ""
+    for (let word of words) {
+        string += word
+        if (s == string) {
+            return true
+        } else if (string.length > s.length) {
+
+            return false
+        }
     }
+    return false
 };
